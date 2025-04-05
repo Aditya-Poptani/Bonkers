@@ -1,0 +1,340 @@
+@font-face {
+    font-family: "GI-Regular";
+    src: url("GlacialIndifference-Regular.ttf") format("TrueType");
+}
+@font-face {
+    font-family: "GI-Bold";
+    src: url("GlacialIndifference-Bold.ttf") format("TrueType");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    font-family: "GI-Regular";
+    color: white;
+    overflow: hidden;
+    
+    /* overflow: hidden; */
+}
+a{
+    text-decoration: none;
+}
+main{
+    position: relative;
+}
+.home{
+    height: 100vh;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;   
+}
+header{
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: green; */
+    /* position: relative; */
+}
+.left-head-section,.right-head-section{
+    display: flex;
+    align-self: flex-end;
+    gap: 0.9vw;
+    position: relative;
+}
+.left-head-section{
+    margin-left: 0.5vw;
+}
+.right-head-section{
+    margin-right: 0.5vw;
+}
+.left-head-section ul,.right-head-section ul{
+    overflow: hidden;
+    position: relative;
+}
+.header-links-text,.header-links-text-copy{
+    color: white;
+    list-style-type: none;
+    position: relative;
+    font-size: 1.1vw;
+}
+.header-links-text{
+    top: -100%;
+}
+.header-links-text-copy{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.center-logo-container{
+    margin-top: 0.7vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(3);
+    z-index: 1000;
+}
+.center-logo-container img{
+    height: 6vh;
+}
+.main-img-container{
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: chartreuse; */
+    /* margin-bottom: 1vw; */
+    position: relative;
+    display: flex; 
+    /* opacity: 0; */
+    align-items: end;
+}
+.main-img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: 10px; */
+    position: absolute;
+    /* top: 10%; */
+    user-select: none;  
+}
+.main-img-overlay{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+    top: 0%;
+    position: absolute;
+}
+.cursor{
+    height: 0.75vw;
+    width: 0.75vw;
+    background-color: white;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+.content-wrapper{
+    position: absolute;
+    height: 20%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+.content-container{
+    height: fit-content;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5vw;
+    gap: 0.7vw;
+    margin-bottom: 2vw;
+}
+.content-container h2{
+    width: 65%;
+    font-weight: 500;
+    font-size: 1.8vw;
+    line-height: 1.4vw;
+    opacity: 0;
+    position: relative;
+    top: 5%;
+}
+.content-container p{
+    width: 75%;
+    font-size: 1.1vw;
+    opacity: 0;
+    position: relative;
+    top: 5%;
+}
+.launch-date-container{
+    position: absolute;
+    overflow: hidden;
+    right: 5%;
+    bottom: 30%;
+    z-index: 100;
+    height: 10%;
+    width: 25%;
+}
+.launch-date-mainText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 1.8vw;
+    line-height: 1.75vw;
+    top: 100%;
+}
+.center-logo-container::selection,.header-links-text::selection,.header-links-text-copy::selection{
+    color: black;
+    background-color: white;
+}
+.launch-date-mainText::selection,.content-container h2::selection,.content-container p::selection{
+    color: white;
+    background-color: black;
+}
+.shopNow-btn{
+    margin-right: 3vw;
+    font-size: 1vw;
+    padding: 0.5vw 1.3vw;
+    opacity: 0;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 2.5vw;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+.shopNow-btn:hover{
+    color: black;
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+footer{
+    min-height: 50vh;
+    max-height: 50vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+footer h1{
+    position: absolute;
+    font-size: 15vw;
+    font-family: "GI-Regular";
+    bottom: -24.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* font-weight: normal; */
+}
+.designer-credit-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    gap: 0.3vw;
+}
+.designer-credit-container h2{
+    font-weight: normal;
+    font-size: 1.2vw;
+    text-decoration: underline;
+}
+.designer-tag-container h3{
+    font-weight: normal;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.655);
+}
+.designer-tag-container a{
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+    margin-left: 0.5vw;
+    position: relative;
+    cursor: pointer;
+}
+.designer-tag-container{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.designer-tag-container:hover h3{
+    color: white;
+}
+.designer-tag-container:hover svg{
+    fill: white;
+}
+.designer-tag-container:hover .designer-card{
+    opacity: 1;
+}
+.designer-tag-container svg{
+    fill: rgba(255, 255, 255, 0.655);
+    height: 2vh;
+}
+.designer-card{
+    position: absolute;
+    display: flex;
+    /* background-color: green; */
+    top: 150%;
+    left: -25%;
+    padding: 0.6vw 1vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    gap: 1vw;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+.designer-info{
+    display: flex;
+    flex-direction: column;
+}
+.designer-info h2{
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: white;
+}
+.designer-info h3{
+    font-size: 0.9vw;
+    color: gray;
+    filter: brightness(0.5);
+}
+.designer-card img{
+    height: 2.5vw;
+    border-radius: 50%;
+}
+.searchbar-wrapper{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 10.5%;
+    width: 20%;
+    overflow: hidden;
+}
+.searchbar-container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    padding: 0.3vw;
+    gap: 0.1vw;
+    position: absolute;
+    top: 100%;
+}
+.searchbar-container i{
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.searchbar-container input{
+    flex:1;
+    width: 100%;
+    padding-left: 0.5vw;
+    font-family: "GI-Regular";
+    font-size: 1vw;
+}
+#search-btn{
+    cursor: pointer;
+}
+
+header ul a{
+    cursor: pointer;
+}
